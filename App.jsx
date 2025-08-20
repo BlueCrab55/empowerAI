@@ -188,13 +188,8 @@ export default function App() {
     return buildClinicalPlan('pf', readiness)
   }, [triage, condition, track, readiness])
 
-  const [library, setLibrary] = useState([])
-  useEffect(()=> {
-    fetch('/exercise_sample.json')
-      .then(r => r.json())
-      .then(setLibrary)
-      .catch(()=> setLibrary([]))
-  }, [])
+  const [library] = useState(exerciseData);
+
 
   const recs = useMemo(()=> {
     if (!Array.isArray(library) || library.length === 0) return []
