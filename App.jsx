@@ -1,3 +1,4 @@
+import exerciseData from "./exercise_sample.json";
 import React, { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Sparkles, Download, Printer, Brain, Activity, ClipboardList, ShieldCheck, HeartPulse } from 'lucide-react'
